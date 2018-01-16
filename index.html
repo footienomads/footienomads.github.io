@@ -150,20 +150,20 @@ fieldset {
 <body>
 
 <div class="container">  
-  <form id="contact" action="" method="post">
+  <form id="contact" action="https://script.google.com/macros/s/AKfycbyXryXMwIG-uaFO12V5Cika4KZSGA5fvVbSuqlDRfl7IcZEgJw/exec" method="post" id="gform">
     <h3>Contact Form</h3>
     <h4>Join us here</h4>
     <fieldset>
       <label>Name:</label>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus name="name" id="name">
     </fieldset>
     <fieldset>
       <label>Email:</label>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required name="email" id="email">
     </fieldset>
     <fieldset>
     	<label>Country:</label>
-    	<select type="country" tabindex="5" required>
+    	<select type="country" tabindex="3" required name="country" id="country">
     		<option value="" disabled="" selected="">Select your option</option>
 		    <option value="Afghanistan">Afghanistan</option>
 		    <option value="Albania">Albania</option>
@@ -408,17 +408,25 @@ fieldset {
     </fieldset>
     <fieldset>
       <label>City living in:</label>
-      <input placeholder="City" type="city" tabindex="4" required>
+      <input placeholder="City" type="city" tabindex="4" required name="city" id="city">
     </fieldset>
     <fieldset>
       <label>Supporter of:</label>
-      <input placeholder="Supporter" type="supporter" tabindex="3" required>
+      <input placeholder="Supporter" type="supporter" tabindex="5" required name="supporter" id="supporter">
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
   </form>
 </div>
+
+<div style="display: none;" id="thankyou_message">
+	<h2><em>Thanks</em> for volunteering!
+		I'll get back to you soon!</h2>
+</div>
+
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 </body>
 </html>
